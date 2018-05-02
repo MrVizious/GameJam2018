@@ -9,6 +9,7 @@ public class LucyMovementScript : MonoBehaviour {
     private int direction;
     public float velocity = 8f;
     private float currentVelocity;
+    private bool IsDying = false;
 
     [Header("Animation")]
     private Animator myAnim;
@@ -24,6 +25,8 @@ public class LucyMovementScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
+        if (IsDying) { return; }
+
         direction = 0;
         currentVelocity = Input.GetAxisRaw("Horizontal");
 
@@ -57,4 +60,15 @@ public class LucyMovementScript : MonoBehaviour {
                     child.localScale = new Vector3(Mathf.Abs(child.localScale.x), child.localScale.y, 1);
             }
         }
+
+    public void Die()
+    {
+        IsDying = true;
+        invoke("Respawn", 1f);
+    }
+
+    private void Respawn()
+    {
+        GameManagerScript.GetGameManager().Respawn();
+    }
 }
