@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManagerScript : MonoBehaviour
@@ -22,4 +22,4 @@ public class GameManagerScript : MonoBehaviour
     }
 
 }
-
+*/

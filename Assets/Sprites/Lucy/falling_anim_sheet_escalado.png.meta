@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8cac84ca5bdb9c74399b20636cc8c762
-timeCreated: 1525260805
+timeCreated: 1525276083
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -89,8 +89,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 93
-        height: 126
+        width: 96
+        height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,9 +101,9 @@ TextureImporter:
       name: falling_anim_sheet_escalado_1
       rect:
         serializedVersion: 2
-        x: 105
+        x: 110
         y: 0
-        width: 93
+        width: 96
         height: 129
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -115,10 +115,10 @@ TextureImporter:
       name: falling_anim_sheet_escalado_2
       rect:
         serializedVersion: 2
-        x: 210
+        x: 220
         y: 0
-        width: 93
-        height: 123
+        width: 96
+        height: 126
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

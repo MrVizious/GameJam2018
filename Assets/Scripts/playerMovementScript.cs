@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(SpriteRenderer))]
 public class playerMovementScript : MonoBehaviour
 {
 
@@ -13,9 +12,10 @@ public class playerMovementScript : MonoBehaviour
 
     //Public variables
     public float speed = 5f;
+    public bool isMoving;
 
     //Script info
-    float direction = 1; // Right > 0, Left < 0
+    public float direction = 1; // Right > 0, Left < 0
 
 
     // Use this for initialization
@@ -23,7 +23,6 @@ public class playerMovementScript : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -32,20 +31,13 @@ public class playerMovementScript : MonoBehaviour
     {
 
         direction = Input.GetAxis("Horizontal");
-        Render();
 
     }
 
-    void Render()
+    void LateUpdate()
     {
-        if (direction > 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else if (direction < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
+        if (direction != 0) isMoving = true;
+        else isMoving = false;
     }
 
 
