@@ -1,9 +1,13 @@
 fileFormatVersion: 2
-guid: 7222382008a5b1744a9910b22244e854
-timeCreated: 1525254642
+guid: f8ac271b2ce0b3040b8d238bd632a1a4
+timeCreated: 1525271440
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: limbo_background_tiles_0
+    21300002: limbo_background_tiles_1
+    21300004: limbo_background_tiles_2
+    21300006: limbo_background_tiles_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -40,12 +44,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 160
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -79,7 +83,63 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: limbo_background_tiles_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 168
+        width: 108
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: limbo_background_tiles_1
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 168
+        width: 108
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: limbo_background_tiles_2
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 40
+        width: 108
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: limbo_background_tiles_3
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 40
+        width: 108
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

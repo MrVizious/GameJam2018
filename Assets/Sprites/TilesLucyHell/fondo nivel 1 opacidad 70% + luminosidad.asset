@@ -9,9 +9,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: plat1_left
+  m_Name: fondo nivel 1 opacidad 70% + luminosidad
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 21300000, guid: a7a48e71be924414db4d5abdf047d61f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12c89e4bca6ec1642b3fb5e776a66abf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
