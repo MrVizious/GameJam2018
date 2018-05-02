@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -18,6 +17,9 @@ public class playerMovementScript : MonoBehaviour
     //Script info
     float direction = 1; // Right > 0, Left < 0
 
+    [Header("Animation")]
+    private Animator myAnim;
+
 
     // Use this for initialization
     void Start()
@@ -35,6 +37,11 @@ public class playerMovementScript : MonoBehaviour
         direction = Input.GetAxis("Horizontal");
         Render();
 
+    }
+
+    void LateUpdate()
+    {
+        myAnim.SetBool("IsMoving", speed != 0);
     }
 
     void Render()
