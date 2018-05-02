@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 8cac84ca5bdb9c74399b20636cc8c762
-timeCreated: 1525276083
+guid: 049c795c37724d24e8e3ce1fdd9243c5
+timeCreated: 1525267196
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: falling_anim_sheet_escalado_0
-    21300002: falling_anim_sheet_escalado_1
-    21300004: falling_anim_sheet_escalado_2
+    21300000: lucy morir estadio  escalado 133_0
+    21300002: lucy morir estadio  escalado 133_1
+    21300004: lucy morir estadio  escalado 133_2
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -84,13 +84,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: falling_anim_sheet_escalado_0
+      name: lucy morir estadio  escalado 133_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 129
+        x: 10
+        y: 16
+        width: 64
+        height: 104
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -98,13 +98,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: falling_anim_sheet_escalado_1
+      name: lucy morir estadio  escalado 133_1
       rect:
         serializedVersion: 2
-        x: 110
-        y: 0
-        width: 96
-        height: 129
+        x: 114
+        y: 10
+        width: 78
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,13 +112,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: falling_anim_sheet_escalado_2
+      name: lucy morir estadio  escalado 133_2
       rect:
         serializedVersion: 2
-        x: 220
-        y: 0
-        width: 96
-        height: 126
+        x: 231
+        y: 10
+        width: 78
+        height: 86
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

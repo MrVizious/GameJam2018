@@ -9,11 +9,12 @@ public class playerJumpScript : MonoBehaviour {
     
     //Components
     Rigidbody2D rb;
-    //Animator animator;
 
     //Public variables
     public float jumpForce = 5f;
     public int maxNumberOfJumps = 2;
+    public bool isFalling;
+    public bool isRising;
 
     //Private variables
     private int numberOfJumpsMade = 0;
@@ -51,7 +52,12 @@ public class playerJumpScript : MonoBehaviour {
         }
     }
 
-     private void IsGrounded()
+    private void FixedUpdate()
+    {
+        IsGrounded();
+    }
+
+    private void IsGrounded()
     {
         rightOrigin = transform.position + new Vector3(width, -heigth / 2, 0);
         leftOrigin = transform.position + new Vector3(-width, -heigth / 2, 0);
@@ -65,6 +71,23 @@ public class playerJumpScript : MonoBehaviour {
         _IsGrounded = rightRay.collider != null || leftRay.collider != null;
 
         if (_IsGrounded)
+        {
             numberOfJumpsMade = 0;
+            isRising = false;
+            isFalling = false;
+        }
+        else
+        {
+            if (rb.velocity.y > 0)
+            {
+                isRising = true;
+                isFalling = false;
+            }
+            else if (rb.velocity.y < 0)
+            {
+                isRising = false;
+                isFalling = true;
+            }
+        }
     }
 }

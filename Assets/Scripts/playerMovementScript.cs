@@ -37,7 +37,7 @@ public class playerMovementScript : MonoBehaviour
 
     void LateUpdate()
     {
-        if (speed != 0) isMoving = true;
+        if (direction != 0) isMoving = true;
         else isMoving = false;
     }
 
