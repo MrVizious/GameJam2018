@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+[RequireComponent(typeof(Rigidbody2D))]
 public class LucyMovementScript : MonoBehaviour {
-    [Header("Character")]
-    private Transform child;
+    //[Header("Character")]
+    //private Transform child;
     private Rigidbody2D myRigidbody;
     private int direction;
     public float velocity = 8f;
     private float currentVelocity;
+    private SpriteRenderer spriteRenderer;
 
     [Header("Animation")]
     private Animator myAnim;
@@ -18,7 +21,8 @@ public class LucyMovementScript : MonoBehaviour {
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
-        child = transform.GetChild(0);
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        //child = transform.GetChild(0);
 	}
 	
 	// Update is called once per frame
@@ -42,19 +46,22 @@ public class LucyMovementScript : MonoBehaviour {
     }
 
     private void Move()
-        {
+    {
             myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * velocity, myRigidbody.velocity.y);
-        }
+    }
 
-        private void Flip()
-        {
+    private void Flip()
+    {
             if (direction < 0)
             {
-                child.localScale = new Vector3(-1 * Mathf.Abs(child.localScale.x), child.localScale.y, 1);
+                spriteRenderer.flipX = true;
+
+                //child.localScale = new Vector3(-1 * Mathf.Abs(child.localScale.x), child.localScale.y, 1);
             }
             else if (direction > 0)
             {
-                    child.localScale = new Vector3(Mathf.Abs(child.localScale.x), child.localScale.y, 1);
+                spriteRenderer.flipX = false;
+                //child.localScale = new Vector3(Mathf.Abs(child.localScale.x), child.localScale.y, 1);
             }
-        }
+    }
 }

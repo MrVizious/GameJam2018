@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4780038568379206}
   - component: {fileID: 2569400267493796676}
   m_Layer: 31
-  m_Name: Palettee
+  m_Name: Palette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
