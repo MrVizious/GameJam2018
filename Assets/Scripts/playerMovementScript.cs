@@ -13,12 +13,10 @@ public class playerMovementScript : MonoBehaviour
 
     //Public variables
     public float speed = 5f;
+    public bool isMoving;
 
     //Script info
     float direction = 1; // Right > 0, Left < 0
-
-    [Header("Animation")]
-    private Animator myAnim;
 
 
     // Use this for initialization
@@ -26,7 +24,6 @@ public class playerMovementScript : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 
@@ -35,25 +32,13 @@ public class playerMovementScript : MonoBehaviour
     {
 
         direction = Input.GetAxis("Horizontal");
-        Render();
 
     }
 
     void LateUpdate()
     {
-        myAnim.SetBool("IsMoving", speed != 0);
-    }
-
-    void Render()
-    {
-        if (direction > 0)
-        {
-            spriteRenderer.flipX = false;
-        }
-        else if (direction < 0)
-        {
-            spriteRenderer.flipX = true;
-        }
+        if (speed != 0) isMoving = true;
+        else isMoving = false;
     }
 
 

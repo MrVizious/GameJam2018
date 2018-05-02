@@ -19,17 +19,13 @@ public class playerJumpScript : MonoBehaviour {
     private int numberOfJumpsMade = 0;
 
     [Header("Ground detection")]
-    private bool _IsGrounded;
+    public bool _IsGrounded;
     LayerMask Ground;
     public float width;
     public float heigth;
     private float RayLength = 0.1f;
-    private bool DoubleJump = true;
     Vector3 rightOrigin;
     Vector3 leftOrigin;
-
-    [Header("Animation")]
-    private Animator myAnim;
 
 
     // Use this for initialization
@@ -37,33 +33,25 @@ public class playerJumpScript : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         //animator = GetComponent<Animator>();
         Ground = (1 << LayerMask.NameToLayer("Ground"));
-        myAnim = GetComponent<Animator>();
     }
 	
 	// Update is called once per frame
 	void Update () {
         
-        IsGrounded();
-        if (_IsGrounded && Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump"))
             Jump();
-        else if ((!_IsGrounded && DoubleJump) && Input.GetButtonDown("Jump"))
+    }
+
+    void Jump()
+    {
+        if (numberOfJumpsMade < maxNumberOfJumps)
         {
-            DoubleJump = false;
-            Jump();
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            numberOfJumpsMade++;
         }
     }
 
-    void LateUpdate()
-    {
-        myAnim.SetBool("IsGrounded", _IsGrounded);
-    }
-
-    private void Jump()
-    {
-        rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
-    }
-
-    private void IsGrounded()
+     private void IsGrounded()
     {
         rightOrigin = transform.position + new Vector3(width, -heigth / 2, 0);
         leftOrigin = transform.position + new Vector3(-width, -heigth / 2, 0);
@@ -77,6 +65,6 @@ public class playerJumpScript : MonoBehaviour {
         _IsGrounded = rightRay.collider != null || leftRay.collider != null;
 
         if (_IsGrounded)
-            DoubleJump = true;
+            numberOfJumpsMade = 0;
     }
 }
