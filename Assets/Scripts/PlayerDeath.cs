@@ -1,33 +1,26 @@
-﻿/*using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerDeath : MonoBehaviour {
-    private bool IsDaying = false;
+    public bool IsDead;
 
     // Use this for initialization
     void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (IsDaying)
-        {
-            return;
-        }
+        IsDead = false;
     }
+	
+	
 
     public void Die()
     {
-        IsDaying = true;
-        myAnim.SetBool("IsDead", IsDaying);
-        Invoke("Respawn", 1f);
+        IsDead = true;
+        
+        //Invoke("Respawn", 1f);
     }
 
     private void Respawn()
     {
-        GameManagerScript.GetGameManager().Respawn();
+        //GameManagerScript.GetGameManager().Respawn();
     }
 }
-*/

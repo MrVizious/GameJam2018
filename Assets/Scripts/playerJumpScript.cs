@@ -13,6 +13,8 @@ public class playerJumpScript : MonoBehaviour {
     //Public variables
     public float jumpForce = 5f;
     public int maxNumberOfJumps = 2;
+    public bool isFalling;
+    public bool isRising;
 
     //Private variables
     private int numberOfJumpsMade = 0;
@@ -65,5 +67,18 @@ public class playerJumpScript : MonoBehaviour {
 
         if (_IsGrounded)
             numberOfJumpsMade = 0;
+        else
+        {
+            if(rb.velocity.y > 0)
+            {
+                isRising = true;
+                isFalling = false;
+            }
+            else
+            {
+                isRising = false;
+                isFalling = true;
+            }
+        }
     }
 }
