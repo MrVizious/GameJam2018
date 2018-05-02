@@ -5,7 +5,6 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 //[RequireComponent(typeof(Animator))]
-[RequireComponent(typeof(Collider2D))]
 public class playerJumpScript : MonoBehaviour {
     
     //Components
@@ -15,13 +14,14 @@ public class playerJumpScript : MonoBehaviour {
     //Public variables
     public float jumpForce = 5f;
     public int maxNumberOfJumps = 2;
-    public Collider2D feetCollider;
 
+    //Private variables
+    private int numberOfJumpsMade = 0;
 
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-        animator = GetComponent<Animator>();
+        //animator = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -30,10 +30,20 @@ public class playerJumpScript : MonoBehaviour {
         {
             Jump();
         }
+        /*
+        if (isGrounded)
+        {
+            numberOfJumpsMade = 0;
+        }
+        */
 	}
 
     void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+        if (numberOfJumpsMade < maxNumberOfJumps)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            numberOfJumpsMade++;
+        }
     }
 }
