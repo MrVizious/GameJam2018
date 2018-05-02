@@ -16,7 +16,7 @@ public class playerMovementScript : MonoBehaviour
     public bool isMoving;
 
     //Script info
-    float direction = 1; // Right > 0, Left < 0
+    public float direction = 1; // Right > 0, Left < 0
 
 
     // Use this for initialization

@@ -18,6 +18,7 @@ public class animationControllerScript : MonoBehaviour {
 
 
 
+
 	// Use this for initialization
 	void Start () {
         jumpScript = GetComponent<playerJumpScript>();
@@ -35,11 +36,11 @@ public class animationControllerScript : MonoBehaviour {
 
     void checkDirection()
     {
-        if(movementScript.speed > 0)
+        if(movementScript.direction > 0)
         {
             spriteRenderer.flipX = false;
 
-        } else if( movementScript.speed < 0)
+        } else if( movementScript.direction < 0)
         {
             spriteRenderer.flipX = true;
         }
@@ -51,6 +52,8 @@ public class animationControllerScript : MonoBehaviour {
         animator.SetBool("IsFalling", jumpScript.isFalling);
         animator.SetBool("IsRising", jumpScript.isRising);
         animator.SetBool("IsMoving", movementScript.isMoving);
+        animator.SetBool("IsGrounded", jumpScript._IsGrounded);
+
 
     }
 }
