@@ -52,7 +52,12 @@ public class playerJumpScript : MonoBehaviour {
         }
     }
 
-     private void IsGrounded()
+    private void FixedUpdate()
+    {
+        IsGrounded();
+    }
+
+    private void IsGrounded()
     {
         rightOrigin = transform.position + new Vector3(width, -heigth / 2, 0);
         leftOrigin = transform.position + new Vector3(-width, -heigth / 2, 0);
@@ -66,15 +71,19 @@ public class playerJumpScript : MonoBehaviour {
         _IsGrounded = rightRay.collider != null || leftRay.collider != null;
 
         if (_IsGrounded)
+        {
             numberOfJumpsMade = 0;
+            isRising = false;
+            isFalling = false;
+        }
         else
         {
-            if(rb.velocity.y > 0)
+            if (rb.velocity.y > 0)
             {
                 isRising = true;
                 isFalling = false;
             }
-            else
+            else if (rb.velocity.y < 0)
             {
                 isRising = false;
                 isFalling = true;
