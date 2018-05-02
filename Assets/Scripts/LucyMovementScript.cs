@@ -71,11 +71,7 @@ public class LucyMovementScript : MonoBehaviour {
     public void Die()
     {
         IsDying = true;
-<<<<<<< HEAD
-        //invoke("Respawn", 1f);
-=======
         Invoke("Respawn", 1f);
->>>>>>> 9d2dc48bde86f0e18c7400aa78d3d201c04bc2b7
     }
 
     private void Respawn()
