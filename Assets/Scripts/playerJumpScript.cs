@@ -4,15 +4,18 @@ using UnityEngine;
 
 
 [RequireComponent(typeof(Rigidbody2D))]
-[RequireComponent(typeof(Animator))]
+//[RequireComponent(typeof(Animator))]
+[RequireComponent(typeof(Collider2D))]
 public class playerJumpScript : MonoBehaviour {
     
     //Components
     Rigidbody2D rb;
-    Animator animator;
+    //Animator animator;
 
     //Public variables
     public float jumpForce = 5f;
+    public int maxNumberOfJumps = 2;
+    public Collider2D feetCollider;
 
 
     // Use this for initialization
@@ -23,6 +26,14 @@ public class playerJumpScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetButtonDown("Fire1"))
+        {
+            Jump();
+        }
 	}
+
+    void Jump()
+    {
+        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+    }
 }
