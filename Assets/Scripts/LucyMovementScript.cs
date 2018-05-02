@@ -11,11 +11,8 @@ public class LucyMovementScript : MonoBehaviour {
     private int direction;
     public float velocity = 8f;
     private float currentVelocity;
-<<<<<<< HEAD
     private SpriteRenderer spriteRenderer;
-=======
     private bool IsDying = false;
->>>>>>> f2441836342a35ae6d1a823888469aa2e2beeff1
 
     [Header("Animation")]
     private Animator myAnim;
@@ -69,19 +66,16 @@ public class LucyMovementScript : MonoBehaviour {
                 spriteRenderer.flipX = false;
                 //child.localScale = new Vector3(Mathf.Abs(child.localScale.x), child.localScale.y, 1);
             }
-<<<<<<< HEAD
-=======
         }
 
     public void Die()
     {
         IsDying = true;
-        invoke("Respawn", 1f);
+        //invoke("Respawn", 1f);
     }
 
     private void Respawn()
     {
-        GameManagerScript.GetGameManager().Respawn();
->>>>>>> f2441836342a35ae6d1a823888469aa2e2beeff1
+        //GameManagerScript.GetGameManager().Respawn();
     }
 }

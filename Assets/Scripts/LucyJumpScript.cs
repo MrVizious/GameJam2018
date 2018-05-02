@@ -4,7 +4,7 @@ public class LucyJumpScript : MonoBehaviour
 {
     [Header("Character")]
 
-    private Transform child;
+    //private Transform child;
     private Rigidbody2D myRigidbody;
     private int direction;
     public float velocity = 8f;
@@ -29,7 +29,7 @@ public class LucyJumpScript : MonoBehaviour
     {
         myRigidbody = GetComponent<Rigidbody2D>();
         myAnim = GetComponent<Animator>();
-        child = transform.GetChild(0);
+        //child = transform.GetChild(0);
         Ground = (1 << LayerMask.NameToLayer("Ground"));
     }
 
@@ -92,11 +92,11 @@ public class LucyJumpScript : MonoBehaviour
     {
         if (direction < 0)
         {
-            child.localScale = new Vector3(-1 * Mathf.Abs(child.localScale.x), child.localScale.y, 1);
+            //child.localScale = new Vector3(-1 * Mathf.Abs(child.localScale.x), child.localScale.y, 1);
         }
         else if (direction > 0)
         {
-            child.localScale = new Vector3(Mathf.Abs(child.localScale.x), child.localScale.y, 1);
+            //child.localScale = new Vector3(Mathf.Abs(child.localScale.x), child.localScale.y, 1);
         }
     }
 }
