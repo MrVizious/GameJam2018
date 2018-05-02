@@ -37,7 +37,7 @@ GameObject:
   - component: {fileID: 4392729907859300}
   - component: {fileID: 61210032172789924}
   m_Layer: 8
-  m_Name: Plataforma
+  m_Name: Plataforma1_Limbo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
