@@ -9,7 +9,6 @@ public class playerJumpScript : MonoBehaviour {
     
     //Components
     Rigidbody2D rb;
-    //Animator animator;
 
     //Public variables
     public float jumpForce = 5f;
