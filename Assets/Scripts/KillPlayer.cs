@@ -5,9 +5,9 @@ public class KillPlayer : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player")
+        if (other.tag == "Character")
         {
-            other.GetComponent<LucyMovementScript>().Die();
+            other.GetComponent<playerMovementScript>().Die();
         }
     }
 }
