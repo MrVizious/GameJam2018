@@ -4,7 +4,8 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(SpriteRenderer))]
-public class playerMovement : MonoBehaviour {
+public class playerMovementScript : MonoBehaviour
+{
 
     //Components
     Rigidbody2D rb;
@@ -17,28 +18,31 @@ public class playerMovement : MonoBehaviour {
     float direction = 1; // Right > 0, Left < 0
 
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
 
         rb = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
 
         direction = Input.GetAxis("Horizontal");
         Render();
-		
-	}
+
+    }
 
     void Render()
     {
         if (direction > 0)
         {
             spriteRenderer.flipX = false;
-        } else if(direction < 0)
+        }
+        else if (direction < 0)
         {
             spriteRenderer.flipX = true;
         }
