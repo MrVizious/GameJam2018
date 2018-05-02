@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 
 public class KillPlayer : MonoBehaviour
 {
@@ -11,3 +11,4 @@ public class KillPlayer : MonoBehaviour
         }
     }
 }
+*/
